@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function result() {
+			var win=parseInt(document.myform.win.value);
+			var draw=parseInt(document.myform.draw.value);
+			var lose=parseInt(document.myform.lose.value);
+
+			var totalwin=win*3;
+			var totaldraw=draw*1;
+			var totallose=lose*0;
+			var total=totalwin+totaldraw+totallose;
+
+
+			document.myform.output.value=total;
+		}
+	</script>
+</head>
+
+<body>
+	<th><h3>Exercise 5</h3></th>
+	<form action="" name="myform">
+	Wins: <input type="text" name="win"><br><br>
+	Draws: <input type="text" name="draw"><br><br>
+	Losses: <input type="text" name="lose"><br><br>
+
+	<input type="button" value="Calculate" onclick="result()"><br><br>
+
+	Output:<input type="text" name="output">
+	</form>
+</body>
+</html>
